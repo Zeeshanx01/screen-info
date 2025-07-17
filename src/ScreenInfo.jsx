@@ -121,17 +121,17 @@ export default function ScreenInfo() {
       </div>
       <div>
         <strong>Primary:</strong>{' '}
-        <span style={{ color: '#4338ca' /* indigo-700 */ }}>{primary}</span>
+        <span style={{ color: '#4338ca' }}>{primary}</span>
       </div>
       <div>
         <strong>Min Breakpoints:</strong>{' '}
-        <span style={{ color: '#15803d' /* green-700 */ }}>
+        <span style={{ color: '#15803d' }}>
           {breakpoints.min.join(', ') || 'none'}
         </span>
       </div>
       <div>
         <strong>Max Breakpoints:</strong>{' '}
-        <span style={{ color: '#b91c1c' /* red-700 */ }}>
+        <span style={{ color: '#b91c1c' }}>
           {breakpoints.max.join(', ') || 'none'}
         </span>
       </div>

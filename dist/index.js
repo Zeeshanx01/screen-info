@@ -342,26 +342,17 @@ function le() {
         /* @__PURE__ */ s.jsxs("div", { children: [
           /* @__PURE__ */ s.jsx("strong", { children: "Primary:" }),
           " ",
-          /* @__PURE__ */ s.jsx("span", { style: {
-            color: "#4338ca"
-            /* indigo-700 */
-          }, children: c })
+          /* @__PURE__ */ s.jsx("span", { style: { color: "#4338ca" }, children: c })
         ] }),
         /* @__PURE__ */ s.jsxs("div", { children: [
           /* @__PURE__ */ s.jsx("strong", { children: "Min Breakpoints:" }),
           " ",
-          /* @__PURE__ */ s.jsx("span", { style: {
-            color: "#15803d"
-            /* green-700 */
-          }, children: i.min.join(", ") || "none" })
+          /* @__PURE__ */ s.jsx("span", { style: { color: "#15803d" }, children: i.min.join(", ") || "none" })
         ] }),
         /* @__PURE__ */ s.jsxs("div", { children: [
           /* @__PURE__ */ s.jsx("strong", { children: "Max Breakpoints:" }),
           " ",
-          /* @__PURE__ */ s.jsx("span", { style: {
-            color: "#b91c1c"
-            /* red-700 */
-          }, children: i.max.join(", ") || "none" })
+          /* @__PURE__ */ s.jsx("span", { style: { color: "#b91c1c" }, children: i.max.join(", ") || "none" })
         ] }),
         /* @__PURE__ */ s.jsxs("div", { children: [
           /* @__PURE__ */ s.jsx("strong", { children: "Size:" }),
