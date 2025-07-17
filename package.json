@@ -1,0 +1,32 @@
+{
+  "name": "screen-info",
+  "version": "1.0.0",
+  "description": "A simple React component to display screen size and device info.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "screen",
+    "device",
+    "responsive",
+    "react",
+    "component"
+  ],
+  "author": "Zeeshan Munir",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^5.4.19"
+  }
+}
