@@ -99,11 +99,11 @@ function oe() {
       }
       if (r) {
         r = console;
-        var n = r.error, o = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        var n = r.error, a = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
         return n.call(
           r,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
-          o
+          a
         ), l(e);
       }
     }
@@ -144,13 +144,13 @@ function oe() {
         configurable: !0
       });
     }
-    function x() {
+    function E() {
       var e = t(this.type);
       return z[e] || (z[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function v(e, r, n, o, m, f, y, w) {
+    function v(e, r, n, a, m, f, y, w) {
       return n = f.ref, e = {
         $$typeof: C,
         type: e,
@@ -159,7 +159,7 @@ function oe() {
         _owner: m
       }, (n !== void 0 ? n : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: x
+        get: E
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -182,48 +182,48 @@ function oe() {
         value: w
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function _(e, r, n, o, m, f, y, w) {
-      var a = r.children;
-      if (a !== void 0)
-        if (o)
-          if (K(a)) {
-            for (o = 0; o < a.length; o++)
-              P(a[o]);
-            Object.freeze && Object.freeze(a);
+    function _(e, r, n, a, m, f, y, w) {
+      var s = r.children;
+      if (s !== void 0)
+        if (a)
+          if (K(s)) {
+            for (a = 0; a < s.length; a++)
+              P(s[a]);
+            Object.freeze && Object.freeze(s);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else P(a);
+        else P(s);
       if (I.call(r, "key")) {
-        a = t(e);
-        var E = Object.keys(r).filter(function(ee) {
+        s = t(e);
+        var x = Object.keys(r).filter(function(ee) {
           return ee !== "key";
         });
-        o = 0 < E.length ? "{key: someKey, " + E.join(": ..., ") + ": ...}" : "{key: someKey}", D[a + o] || (E = 0 < E.length ? "{" + E.join(": ..., ") + ": ...}" : "{}", console.error(
+        a = 0 < x.length ? "{key: someKey, " + x.join(": ..., ") + ": ...}" : "{key: someKey}", D[s + a] || (x = 0 < x.length ? "{" + x.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
-          o,
           a,
-          E,
-          a
-        ), D[a + o] = !0);
+          s,
+          x,
+          s
+        ), D[s + a] = !0);
       }
-      if (a = null, n !== void 0 && (i(n), a = "" + n), b(r) && (i(r.key), a = "" + r.key), "key" in r) {
+      if (s = null, n !== void 0 && (i(n), s = "" + n), b(r) && (i(r.key), s = "" + r.key), "key" in r) {
         n = {};
         for (var O in r)
           O !== "key" && (n[O] = r[O]);
       } else n = r;
-      return a && d(
+      return s && d(
         n,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), v(
         e,
-        a,
+        s,
         f,
         m,
         c(),
@@ -247,26 +247,26 @@ React keys must be passed directly to JSX without using spread:
       g,
       u
     )(), $ = S(p(u)), D = {};
-    h.Fragment = T, h.jsx = function(e, r, n, o, m) {
+    h.Fragment = T, h.jsx = function(e, r, n, a, m) {
       var f = 1e4 > j.recentlyCreatedOwnerStacks++;
       return _(
         e,
         r,
         n,
         !1,
-        o,
+        a,
         m,
         f ? Error("react-stack-top-frame") : F,
         f ? S(p(e)) : $
       );
-    }, h.jsxs = function(e, r, n, o, m) {
+    }, h.jsxs = function(e, r, n, a, m) {
       var f = 1e4 > j.recentlyCreatedOwnerStacks++;
       return _(
         e,
         r,
         n,
         !0,
-        o,
+        a,
         m,
         f ? Error("react-stack-top-frame") : F,
         f ? S(p(e)) : $
@@ -275,20 +275,20 @@ React keys must be passed directly to JSX without using spread:
   }()), h;
 }
 process.env.NODE_ENV === "production" ? A.exports = ne() : A.exports = oe();
-var s = A.exports;
+var o = A.exports;
 const ae = (t) => {
   const l = [], i = [];
   return t >= 640 && l.push("sm"), t >= 768 && l.push("md"), t >= 1024 && l.push("lg"), t >= 1280 && l.push("xl"), t >= 1536 && l.push("2xl"), t < 1536 && i.push("max-2xl"), t < 1280 && i.push("max-xl"), t < 1024 && i.push("max-lg"), t < 768 && i.push("max-md"), t < 640 && i.push("max-sm"), { min: l, max: i };
 }, se = (t) => t < 640 ? "base" : t < 768 ? "sm" : t < 1024 ? "md" : t < 1280 ? "lg" : t < 1536 ? "xl" : "2xl";
-function le() {
+function ie() {
   const [t, l] = k({ width: 0, height: 0 }), [i, p] = k({ min: [], max: [] }), [c, u] = k("base"), [b, d] = k(!1);
   return te(() => {
-    const x = () => {
+    const E = () => {
       const v = window.innerWidth, _ = window.innerHeight;
       l({ width: v, height: _ }), p(ae(v)), u(se(v));
     };
-    return x(), window.addEventListener("resize", x), () => window.removeEventListener("resize", x);
-  }, []), b ? /* @__PURE__ */ s.jsxs(
+    return E(), window.addEventListener("resize", E), () => window.removeEventListener("resize", E);
+  }, []), b ? /* @__PURE__ */ o.jsxs(
     "div",
     {
       style: {
@@ -309,7 +309,7 @@ function le() {
         width: "fit-content"
       },
       children: [
-        /* @__PURE__ */ s.jsxs(
+        /* @__PURE__ */ o.jsxs(
           "div",
           {
             style: {
@@ -319,8 +319,8 @@ function le() {
               marginBottom: "0.5rem"
             },
             children: [
-              /* @__PURE__ */ s.jsx("strong", { style: { color: "rgba(0, 0, 0, 0.6)", marginRight: "1rem" }, children: "Screen Info" }),
-              /* @__PURE__ */ s.jsx(
+              /* @__PURE__ */ o.jsx("strong", { style: { color: "rgba(0, 0, 0, 0.6)", marginRight: "1rem" }, children: "Screen Info" }),
+              /* @__PURE__ */ o.jsx(
                 "button",
                 {
                   onClick: () => d(!1),
@@ -339,23 +339,23 @@ function le() {
             ]
           }
         ),
-        /* @__PURE__ */ s.jsxs("div", { children: [
-          /* @__PURE__ */ s.jsx("strong", { children: "Primary:" }),
+        /* @__PURE__ */ o.jsxs("div", { children: [
+          /* @__PURE__ */ o.jsx("strong", { children: "Primary:" }),
           " ",
-          /* @__PURE__ */ s.jsx("span", { style: { color: "#4338ca" }, children: c })
+          /* @__PURE__ */ o.jsx("span", { style: { color: "#4338ca" }, children: c })
         ] }),
-        /* @__PURE__ */ s.jsxs("div", { children: [
-          /* @__PURE__ */ s.jsx("strong", { children: "Min Breakpoints:" }),
+        /* @__PURE__ */ o.jsxs("div", { children: [
+          /* @__PURE__ */ o.jsx("strong", { children: "Min Breakpoints:" }),
           " ",
-          /* @__PURE__ */ s.jsx("span", { style: { color: "#15803d" }, children: i.min.join(", ") || "none" })
+          /* @__PURE__ */ o.jsx("span", { style: { color: "#15803d" }, children: i.min.join(", ") || "none" })
         ] }),
-        /* @__PURE__ */ s.jsxs("div", { children: [
-          /* @__PURE__ */ s.jsx("strong", { children: "Max Breakpoints:" }),
+        /* @__PURE__ */ o.jsxs("div", { children: [
+          /* @__PURE__ */ o.jsx("strong", { children: "Max Breakpoints:" }),
           " ",
-          /* @__PURE__ */ s.jsx("span", { style: { color: "#b91c1c" }, children: i.max.join(", ") || "none" })
+          /* @__PURE__ */ o.jsx("span", { style: { color: "#b91c1c" }, children: i.max.join(", ") || "none" })
         ] }),
-        /* @__PURE__ */ s.jsxs("div", { children: [
-          /* @__PURE__ */ s.jsx("strong", { children: "Size:" }),
+        /* @__PURE__ */ o.jsxs("div", { children: [
+          /* @__PURE__ */ o.jsx("strong", { children: "Size:" }),
           " ",
           t.width,
           "px × ",
@@ -364,7 +364,7 @@ function le() {
         ] })
       ]
     }
-  ) : /* @__PURE__ */ s.jsx(
+  ) : /* @__PURE__ */ o.jsx(
     "button",
     {
       style: {
@@ -386,6 +386,9 @@ function le() {
     }
   );
 }
+function ce() {
+  return /* @__PURE__ */ o.jsx(ie, {});
+}
 export {
-  le as default
+  ce as default
 };
